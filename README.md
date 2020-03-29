@@ -6,7 +6,7 @@ Dependencies
 [Colorama](https://pypi.org/project/colorama/)\
 [Requests](https://pypi.org/project/requests/)
 
-**Linux/MacOS:**\
+**Linux/macOS:**\
 [lolcat](https://github.com/busyloop/lolcat)
 
 Installing
