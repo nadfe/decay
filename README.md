@@ -4,14 +4,14 @@ decay selfbot - by gloss
 
 Dependencies
 ----------
-**All platforms**
-[Python 3.5.3 or higher](https://www.python.org/downloads/)
-[discord.py](https://pypi.org/project/colorama/)
-[Colorama](https://pypi.org/project/colorama/)
-[Requests](https://pypi.org/project/requests/)
+**All platforms**\
+[Python 3.5.3 or higher](https://www.python.org/downloads/)\
+[discord.py](https://pypi.org/project/colorama/)\
+[Colorama](https://pypi.org/project/colorama/)\
+[Requests](https://pypi.org/project/requests/)\
 
-**Linux or MacOS**
-[lolcat](https://github.com/busyloop/lolcat)
+**Linux or MacOS**\
+[lolcat](https://github.com/busyloop/lolcat)\
 
 Installing
 ----------
