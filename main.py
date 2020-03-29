@@ -45,7 +45,7 @@ async def rsc(ctx):
 @bot.command()
 async def cl(ctx, amount=None):
     if not amount:
-        async for ctx.message in ctx.channel.history(limit=13370):
+        async for ctx.message in ctx.channel.history(limit=99999):
             if ctx.message.author == bot.user:
                 await ctx.message.delete()
     else:
