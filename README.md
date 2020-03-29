@@ -1,7 +1,3 @@
-decay selfbot - by gloss
-==========
-
-
 Dependencies
 ----------
 **All platforms:**\
