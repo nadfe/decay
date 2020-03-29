@@ -34,3 +34,6 @@ Command
 * "PING" - Prints your current Discord latency.
 * "PRICE" - Prints current Bitcoin and Ethereum exchange rate in the entered channel.
 * "rsc" - Restarts script from within itself.
+
+shoutout to eight for helping with clear command and os detection
+shoutout to tyler and jon for help with the price command
