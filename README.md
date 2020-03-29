@@ -25,7 +25,7 @@ Installing
 Setup and starting the self-bot
 ----------
 
-Add your [discord auth token](https://github.com/Tyrrrz/DiscordChatExporter/wiki/Obtaining-Token-and-Channel-IDs#how-to-get-user-token) in token.json file and execute main.py.
+Add your [discord user token](https://github.com/Tyrrrz/DiscordChatExporter/wiki/Obtaining-Token-and-Channel-IDs#how-to-get-user-token) in token.json file and execute main.py.
 
 Command
 ----------
