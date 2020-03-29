@@ -11,7 +11,7 @@ Dependencies
 [Requests](https://pypi.org/project/requests/)
 
 **Linux or MacOS:**\
-[lolcat](https://github.com/busyloop/lolcat)\
+[lolcat](https://github.com/busyloop/lolcat)
 
 Installing
 ----------
