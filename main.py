@@ -16,7 +16,7 @@ bot.remove_command('help')
 @bot.event
 async def on_ready():
     def ascii():
-        i = random.randrange(11) + 1
+        i = random.randrange(12) + 1
         if sys.platform == 'win32':
             os.system("cls")
             print(open("./art/" + str(i) + '.txt').read())
