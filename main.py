@@ -29,6 +29,12 @@ async def on_ready():
             print(Fore.WHITE + "[+] {0}".format(bot.user) + Fore.RED)
     ascii()
 
+# Ignore missing commands in console
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        pass
+
 # Retrieves bot user's Discord WebSocket latency.
 @bot.command()
 async def PING(ctx):
