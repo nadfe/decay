@@ -54,13 +54,12 @@ async def rsc(ctx):
 async def cl(ctx, amount=None):
     if not amount:
         amount = 1999
-    else:
-        try:
-            async for ctx.message in ctx.channel.history(limit=int(amount) + 1):
-                if ctx.message.author == bot.user:
-                    await ctx.message.delete()
-        except discord.Forbidden:
-            pass
+    try:
+        async for ctx.message in ctx.channel.history(limit=int(amount) + 1):
+            if ctx.message.author == bot.user:
+                await ctx.message.delete()
+    except discord.Forbidden:
+        pass
 
 # Crypto price command. Uses cryptowatch API.
 @bot.command()
