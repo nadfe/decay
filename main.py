@@ -29,11 +29,13 @@ async def on_ready():
             print(Fore.WHITE + "[+] {0}".format(bot.user) + Fore.RED)
     ascii()
 
-# Ignore missing commands in console
+# Ignore missing commands in console but raise all other errors
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         pass
+    else:
+        raise error
 
 # Retrieves bot user's Discord WebSocket latency.
 @bot.command()
@@ -51,9 +53,7 @@ async def rsc(ctx):
 @bot.command()
 async def cl(ctx, amount=None):
     if not amount:
-        async for ctx.message in ctx.channel.history(limit=99999):
-            if ctx.message.author == bot.user:
-                await ctx.message.delete()
+        amount = 1999
     else:
         try:
             async for ctx.message in ctx.channel.history(limit=int(amount) + 1):
@@ -80,11 +80,9 @@ async def PRICE(ctx):
 @bot.command()
 async def av(ctx, user: discord.User = None):
     if not user:
-        avatar = ctx.author.avatar_url_as(static_format='png', size=1024)
-        await ctx.send(avatar)
-    else:
-        avatar = user.avatar_url_as(static_format='png', size=1024)
-        await ctx.send(avatar)
+        user = bot.user
+    avatar = user.avatar_url_as(static_format='png', size=1024)
+    await ctx.send(avatar)
 
 # Accesses token from json file to prevent token leaks when sending a signal interrupt or editing code while screensharing with people :)
 token = json.loads(open("token.json").read())['token']
