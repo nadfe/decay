@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord import Spotify
 import json
 import os
 from os import system, name
@@ -82,6 +83,24 @@ async def av(ctx, user: discord.User = None):
         user = bot.user
     avatar = user.avatar_url_as(static_format='png', size=1024)
     await ctx.send(avatar)
+
+# Spotify status
+@bot.command(aliases=['fm'])
+async def spotify(ctx, user: discord.Member=None):
+    user = user or ctx.author
+
+    for activity in user.activities:
+        if isinstance(activity, Spotify):
+            embed = discord.Embed(color=0x1ed760)
+            embed.set_author(name=f"{user.nick or user.name} is listening to:", icon_url="https://i.imgur.com/5bPu8ke.jpg")
+            embed.set_thumbnail(url=activity.album_cover_url)
+            embed.add_field(name="Track:", value=f"[{activity.title}](https://open.spotify.com/track/{activity.track_id})")
+            embed.add_field(name="Artist:", value=f"[{activity.artist}](https://open.spotify.com/track/{activity.track_id})")
+            embed.set_footer(text=f"Album: {activity.album} | Track ID: {activity.track_id}")
+            await ctx.send(embed=embed)
+        break
+    else:
+        pass
 
 # Accesses token from json file to prevent token leaks when sending a signal interrupt or editing code while screensharing with people :)
 token = json.loads(open("token.json").read())['token']
