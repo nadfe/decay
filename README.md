@@ -12,11 +12,7 @@ Dependencies
 Installing
 ----------
 
-    # Linux/macOS
     python3 -m pip install -r requirements.txt
-
-    # Windows
-    py -3 -m pip install -r requirements.txt
 
 Setup and starting the self-bot
 ----------
