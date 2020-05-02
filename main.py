@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord import Spotify
 import json
 import os
 from os import system, name
